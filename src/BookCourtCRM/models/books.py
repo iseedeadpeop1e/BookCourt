@@ -3,10 +3,12 @@ from pydantic import BaseModel
 
 
 class BookBase(BaseModel):
-    name: str
-    author: str
+    title: str
     year: str
-    isbn: str
+    description: str
+    image_link: str
+    ISBN: str
+    number_page: str
     genre: str
 
 
@@ -18,4 +20,8 @@ class Book(BookBase):
 
 
 class BookCreate(BookBase):
+    pass
+
+
+class BookUpdate(BookBase):
     pass
